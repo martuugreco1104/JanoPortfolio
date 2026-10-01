@@ -1,393 +1,449 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jano Farías | Video Editor & Operations Project Manager</title>
-    <meta name="description" content="Portfolio de Jano Farías. Edición de video creativo, narrativa visual y dirección de operaciones de producción.">
+    <title>Jano | Video Editor & Post-Producer</title>
+    <meta name="description" content="Portfolio de Jano. Edición de alto impacto, narrativa rítmica y precisión técnica.">
+    
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&display=swap" rel="stylesheet">
+    
     <!-- Styles -->
-    <link rel="stylesheet" href="css/main.css?v=4">
+    <link rel="stylesheet" href="css/main.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        carbon: {
+                            base: '#09090B',
+                            surface: '#141417',
+                            muted: '#121215'
+                        },
+                        text: {
+                            primary: '#FFFFFF',
+                            secondary: '#A1A1AA'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                        clash: ['Clash Display', 'sans-serif'],
+                    },
+                    animation: {
+                        'marquee': 'marquee 30s linear infinite',
+                    },
+                    keyframes: {
+                        marquee: {
+                            '0%': { transform: 'translateX(0)' },
+                            '100%': { transform: 'translateX(-50%)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="page">
-    <!-- Premium Interactive Background Elements -->
-    <div class="bg-grid"></div>
-    <div class="bg-glows">
-        <div class="bg-glow bg-glow--1"></div>
-        <div class="bg-glow bg-glow--2"></div>
-    </div>
-    <header class="header">
-        <div class="header__container">
-            <span class="header__logo">JANO FARÍAS</span>
-            <nav class="header__nav">
-                <a href="#hero" class="header__link">Inicio</a>
-                <a href="#about" class="header__link">Sobre Mí</a>
-                <a href="#stack" class="header__link">Ecosistema</a>
-                <a href="#projects" class="header__link">Videos</a>
-                <div class="header__lang">
-                    <a href="#" class="header__lang-option header__lang-option--active">ES</a>
-                    <span class="header__lang-divider">/</span>
-                    <a href="#" class="header__lang-option">EN</a>
-                </div>
-            </nav>
-        </div>
-    </header>
+<body class="bg-carbon-base text-text-primary antialiased selection:bg-white/20 selection:text-white">
 
-    <main class="main-content">
-        <!-- 1. Hero Section -->
-        <section id="hero" class="hero section">
-            <div class="section__container hero__grid">
-                <div class="hero__content" data-reveal="fade-right">
-                    <div class="hero__badge-status">
-                        <span class="hero__badge-dot"></span>
-                        Disponible / Activo
-                    </div>
-                    <h1 class="hero__title">
-                        Video Editor
-                        <span class="hero__title-accent">& Creative Project Manager.</span>
-                    </h1>
+    <!-- Floating Navbar -->
+    <div class="fixed top-6 left-0 w-full z-50 flex justify-center px-4 pointer-events-none">
+        <header class="pointer-events-auto backdrop-blur-md bg-black/60 border border-white/10 rounded-full px-5 py-3 flex items-center justify-between w-full max-w-5xl shadow-2xl transition-all">
+            <div class="flex items-center">
+                <span class="font-bold text-lg tracking-tight text-white leading-none">JANO PORTAFOLIO</span>
+            </div>
+            
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8 text-sm text-text-secondary font-medium">
+                <a href="#about" class="hover:text-white transition-colors">Sobre mí</a>
+                <a href="#services" class="hover:text-white transition-colors">Servicios</a>
+                <a href="#videos" class="hover:text-white transition-colors">Videos</a>
+                <a href="#contact" class="bg-white text-black px-5 py-1.5 rounded-full hover:bg-gray-200 transition-colors font-semibold">Contacto</a>
+            </nav>
+            
+            <!-- Mobile Nav -->
+            <div class="md:hidden">
+                <a href="#contact" class="bg-white text-black text-xs font-bold px-4 py-2 rounded-full">Hablemos</a>
+            </div>
+        </header>
+    </div>
+
+    <main class="relative z-10">
+        <!-- Hero Section -->
+        <section id="hero" class="pt-28 pb-12 lg:pt-32 lg:pb-24 border-b border-white/5 scroll-mt-28">
+            <div class="max-w-6xl mx-auto px-6 w-full">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
                     
-                    <p class="hero__description" style="font-size: 1.1rem; line-height: 1.8;"><strong>Creatividad sin caos.</strong><br>Soy Video Editor & Creative Project Manager. Mi diferencial: uno la edición dinámica y narrativa con un rigor operativo absoluto. Hago que los flujos de postproducción funcionen como un reloj suizo.</p>
-                    
-                    <div class="hero__actions">
-                        <a href="#contact" class="button button--gradient">Hablemos</a>
-                        <a href="#projects" class="button button--outline">Ver Videos</a>
+                    <!-- Text Content -->
+                    <div class="lg:col-span-7 flex flex-col gap-6 lg:pr-8 order-2 lg:order-1">
+                        <div class="px-3.5 py-1 text-xs tracking-wider uppercase rounded-full border border-white/10 bg-white/5 text-zinc-300 w-max">
+                            DISPONIBLE PARA PROYECTOS
+                        </div>
+                        
+                        <h1 class="text-5xl md:text-6xl lg:text-[5rem] font-clash font-bold tracking-tight text-white leading-[1.05]">
+                            Video Editor <br> & Post-Producer
+                        </h1>
+                        
+                        <p class="text-text-secondary text-lg leading-relaxed max-w-xl">
+                            Edición de alto impacto, narrativa rítmica y precisión técnica. Transformo material bruto en piezas dinámicas con un flujo de trabajo optimizado y entregas puntuales.
+                        </p>
+                        
+                        <div class="flex flex-col sm:flex-row gap-4 mt-4">
+                            <a href="#contact" class="flex items-center justify-center bg-white text-black px-8 h-12 font-semibold hover:bg-gray-200 hover:scale-[1.02] transition-all duration-300 rounded-full min-w-[160px] text-sm">
+                                Hablemos
+                            </a>
+                            <a href="#videos" class="flex items-center justify-center backdrop-blur-sm bg-transparent text-white border border-white/20 px-8 h-12 font-medium hover:border-white/50 hover:bg-white/5 transition-all duration-300 rounded-full min-w-[160px] text-sm">
+                                Ver Videos
+                            </a>
+                        </div>
                     </div>
                     
-                    <div class="hero__socials">
-                        <a href="#" class="hero__social-link" aria-label="Instagram">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                        </a>
-                        <a href="#" class="hero__social-link" aria-label="LinkedIn">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                        </a>
+                    <!-- Visual Content -->
+                    <div class="lg:col-span-5 flex justify-center lg:justify-end order-1 lg:order-2">
+                        <div class="relative w-full max-w-[320px] aspect-[4/5] lg:aspect-[9/16] max-h-72 lg:max-h-[560px] rounded-3xl overflow-hidden border border-white/15 shadow-[0_20px_50px_rgba(0,0,0,0.5)] bg-carbon-surface group">
+                            <video class="w-full h-full object-cover scale-105 transition-transform duration-1000" autoplay muted loop playsinline preload="metadata">
+                                <source src="videos/Video3.mp4" type="video/mp4">
+                            </video>
+                            <div class="absolute inset-0 shadow-[inset_0_0_40px_rgba(0,0,0,0.6)] pointer-events-none"></div>
+                        </div>
                     </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Ticker / Cinta de Ritmo -->
+        <div class="w-full overflow-hidden border-b border-white/5 bg-carbon-base py-4 flex items-center select-none pointer-events-none">
+            <div class="flex whitespace-nowrap animate-marquee opacity-40 font-mono text-xs tracking-widest text-white w-max">
+                <span class="mx-4">RITMO • RETENCIÓN DE AUDIENCIA • SOUND DESIGN • COLOR GRADING • POSTPRODUCCIÓN • ENTREGAS A TÉRMINO •</span>
+                <span class="mx-4">RITMO • RETENCIÓN DE AUDIENCIA • SOUND DESIGN • COLOR GRADING • POSTPRODUCCIÓN • ENTREGAS A TÉRMINO •</span>
+            </div>
+        </div>
+
+        <!-- Sobre Mí Section -->
+        <section id="about" class="py-20 lg:py-24 border-b border-white/5 scroll-mt-28">
+            <div class="max-w-6xl mx-auto px-6">
+                <h2 class="text-3xl font-bold tracking-tight text-white mb-8">Sobre Mí</h2>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+                    <div>
+                        <p class="text-text-secondary text-lg leading-relaxed max-w-xl">
+                            Mi enfoque combina estética visual, ritmo y una rigurosa disciplina de trabajo. Cuento con experiencia liderando equipos y coordinando proyectos bajo alta exigencia, lo que me permite aportar no solo creatividad en el montaje, sino también una comunicación clara, un flujo de trabajo altamente ordenado y un compromiso absoluto con los tiempos de entrega.
+                        </p>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row divide-y sm:divide-y-0 sm:divide-x divide-white/10 border border-white/10 rounded-2xl bg-carbon-surface overflow-hidden">
+                        <div class="p-6 flex-1 flex flex-col justify-center items-center text-center hover:bg-white/5 transition-colors">
+                            <div class="text-4xl lg:text-5xl font-bold text-white mb-2 tracking-tighter">4+</div>
+                            <div class="text-xs text-text-secondary font-mono uppercase tracking-wider">Años</div>
+                            <div class="text-[11px] text-text-secondary mt-1">Experiencia en Coordinación</div>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-center items-center text-center hover:bg-white/5 transition-colors">
+                            <div class="text-4xl lg:text-5xl font-bold text-white mb-2 tracking-tighter">100%</div>
+                            <div class="text-xs text-text-secondary font-mono uppercase tracking-wider">Entregas</div>
+                            <div class="text-[11px] text-text-secondary mt-1">A Término</div>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-center items-center text-center hover:bg-white/5 transition-colors">
+                            <div class="text-4xl lg:text-5xl font-bold text-white mb-2 tracking-tighter">10K+</div>
+                            <div class="text-xs text-text-secondary font-mono uppercase tracking-wider">Assets</div>
+                            <div class="text-[11px] text-text-secondary mt-1">Organizados</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Servicios Section -->
+        <section id="services" class="py-20 lg:py-24 border-b border-white/5 scroll-mt-28">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="mb-12">
+                    <h2 class="text-3xl font-bold tracking-tight text-white mb-3">Servicios</h2>
+                    <p class="text-text-secondary text-base">Soluciones de montaje integral, desde el corte bruto hasta el master final.</p>
                 </div>
                 
-                <div class="hero__visual" data-reveal="fade-left">
-                    <img src="img/perfil.png" class="hero__img" alt="Jano Farías">
-                </div>
-            </div>
-        </section>
-
-        <!-- 2. About Me Section -->
-        <section id="about" class="about section">
-            <div class="section__container">
-                <h2 class="section__title" data-reveal>Sobre Mí.</h2>
-                <div class="about__grid">
-                    <div class="about__content" data-reveal="fade-right">
-                        <p class="about__text">Mi carrera se formó gestionando la logística de eventos masivos y la producción técnica en vivo, entornos donde un segundo de retraso o un imprevisto mal resuelto arruinan todo. Hoy traslado esa misma disciplina al montaje y la postproducción: entregas puntuales, orden milimétrico de archivos y una comunicación proactiva que elimina la fricción en cada fase de trabajo. Hago que la postproducción sea un proceso predecible y profesional, no una fuente de estrés.</p>
-                        
-                        <!-- Premium Metric Hitos Counters -->
-                        <div class="about__metrics">
-                            <div class="metric-item">
-                                <span class="metric-number">4+ Años</span>
-                                <span class="metric-label">Dirección Operativa</span>
-                            </div>
-                            <div class="metric-item">
-                                <span class="metric-number">100%</span>
-                                <span class="metric-label">Entregas a Término</span>
-                            </div>
-                            <div class="metric-item">
-                                <span class="metric-number">10k+</span>
-                                <span class="metric-label">Assets Clasificados</span>
-                            </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+                    <!-- Servicio 1 -->
+                    <div class="h-full flex flex-col p-6 rounded-2xl bg-[#121215] border border-white/10 hover:border-white/25 hover:bg-carbon-surface transition-all duration-300 group">
+                        <div class="min-h-[3.5rem] flex items-center">
+                            <h3 class="text-xl font-bold text-white group-hover:translate-x-1 transition-transform">Edición & Montaje Dinámico</h3>
                         </div>
-
-                        <!-- Signature Placeholder SVG -->
-                        <div class="about__signature">
-                            <svg width="140" height="50" viewBox="0 0 140 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10 32C25 28 40 10 52 15C65 20 58 40 70 35C82 30 98 12 115 22C123 26 130 18 135 20" stroke="var(--color-accent-tertiary)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M45 18L49 22M76 25L81 30" stroke="var(--color-accent-primary)" stroke-width="1.5" stroke-linecap="round"/>
-                            </svg>
+                        <div class="h-8 my-4 flex items-center gap-2 font-mono text-[10px]">
+                            <span class="bg-white/5 border border-white/10 px-2.5 py-1 rounded-sm text-text-secondary">[CapCut]</span>
+                            <span class="bg-white/5 border border-white/10 px-2.5 py-1 rounded-sm text-text-secondary">[Photoshop]</span>
                         </div>
+                        <p class="flex-grow text-sm leading-relaxed text-zinc-400">
+                            Edición rítmica utilizando CapCut y Photoshop para Reels, TikToks, Shorts y contenido dinámico. Enfoque centrado en la retención de audiencia, cortes precisos al ritmo de la música y piezas visualmente atractivas.
+                        </p>
                     </div>
-                    <div class="about__card about__card--metadata" data-reveal="fade-left">
-                        <div class="about__card-header">
-                            <span class="about__card-badge">SYS: META_TAG_INFO</span>
+                    
+                    <!-- Servicio 2 -->
+                    <div class="h-full flex flex-col p-6 rounded-2xl bg-[#121215] border border-white/10 hover:border-white/25 hover:bg-carbon-surface transition-all duration-300 group">
+                        <div class="min-h-[3.5rem] flex items-center">
+                            <h3 class="text-xl font-bold text-white group-hover:translate-x-1 transition-transform">Posproducción & Finalización</h3>
                         </div>
-                        <div class="about__data">
-                            <span class="about__data-label">Ubicación</span>
-                            <span class="about__data-value">Europa / Global</span>
+                        <div class="h-8 my-4 flex items-center gap-2 font-mono text-[10px]">
+                            <span class="bg-white/5 border border-white/10 px-2.5 py-1 rounded-sm text-text-secondary">[Ableton Live]</span>
+                            <span class="bg-white/5 border border-white/10 px-2.5 py-1 rounded-sm text-text-secondary">[Diseño Sonoro]</span>
                         </div>
-                        <div class="about__data">
-                            <span class="about__data-label">Email</span>
-                            <span class="about__data-value">hello@jansound.com</span>
+                        <p class="flex-grow text-sm leading-relaxed text-zinc-400">
+                            Tratamiento sonoro y diseño de audio optimizado en Ableton Live, edición de SFX, corrección de color básica, subtítulos dinámicos y gráfica aplicada para elevar la calidad visual y auditiva del contenido.
+                        </p>
+                    </div>
+                    
+                    <!-- Servicio 3 -->
+                    <div class="h-full flex flex-col p-6 rounded-2xl bg-[#121215] border border-white/10 hover:border-white/25 hover:bg-carbon-surface transition-all duration-300 group">
+                        <div class="min-h-[3.5rem] flex items-center">
+                            <h3 class="text-xl font-bold text-white group-hover:translate-x-1 transition-transform">Flujo de Trabajo & Entrega</h3>
                         </div>
-                        <div class="about__data">
-                            <span class="about__data-label">Disponibilidad</span>
-                            <span class="about__data-value">Aceptando Proyectos</span>
+                        <div class="h-8 my-4 flex items-center gap-2 font-mono text-[10px]">
+                            <span class="bg-white/5 border border-white/10 px-2.5 py-1 rounded-sm text-text-secondary">[Organización]</span>
+                            <span class="bg-white/5 border border-white/10 px-2.5 py-1 rounded-sm text-text-secondary">[Puntualidad]</span>
                         </div>
+                        <p class="flex-grow text-sm leading-relaxed text-zinc-400">
+                            Estructuración eficiente del material de trabajo, organización metódica de assets/archivos y un proceso de edición transparente para asegurar que cada entrega se cumpla sin fricciones y en la fecha acordada.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 3. Ecosystem Stack -->
-        <section id="stack" class="stack section">
-            <div class="section__container">
-                <h2 class="section__title" data-reveal>Ecosistema.</h2>
-                <div class="stack__grid">
-                    <div class="stack-card" data-reveal="fade-up" style="--delay: 1;">
-                        <h3 class="stack-card__title">Edición & Postproducción</h3>
-                        <p class="stack-card__desc">Edición dinámica con CapCut y postproducción audiovisual. Enfoque en ritmo, narrativa visual, diseño de sonido y corrección de color.</p>
-                    </div>
-                    <div class="stack-card" data-reveal="fade-up" style="--delay: 2;">
-                        <h3 class="stack-card__title">Gestión & Operaciones (PM)</h3>
-                        <p class="stack-card__desc">Workflows eficientes y organización de assets. Gestión del pipeline de postproducción de inicio a fin sin retrasos.</p>
-                    </div>
-                    <div class="stack-card" data-reveal="fade-up" style="--delay: 3;">
-                        <h3 class="stack-card__title">Logística & Operaciones</h3>
-                        <p class="stack-card__desc">Resolución de imprevistos técnicos y operativos en campo. Coordinación eficiente de recursos en rodajes.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 4. Featured Projects (Video Portfolio) -->
-        <section id="projects" class="projects section">
-            <div class="section__container">
-                <h2 class="section__title" data-reveal>Videos.</h2>
-                <div class="projects__grid projects__grid--videos">
-                    <!-- Video 1 -->
-                    <div class="video-card" data-reveal="fade-up" style="--delay: 1;">
-                        <div class="video-card__container">
-                            <!-- Opción A: Video Local (Recomendado para hover play nativo) -->
-                            <video class="video-card__player" preload="metadata" loop muted playsinline>
-                                <source src="videos/Video1.MP4#t=0.1" type="video/mp4">
-                                Tu navegador no soporta video.
+        <!-- Videos Section -->
+        <section id="videos" class="py-20 lg:py-24 border-b border-white/5 scroll-mt-28">
+            <div class="max-w-6xl mx-auto px-6">
+                <h2 class="text-3xl font-bold tracking-tight text-white mb-10">Videos Seleccionados</h2>
+                
+                <div class="flex overflow-x-auto lg:grid lg:grid-cols-4 gap-4 lg:gap-6 pb-6 lg:pb-0 snap-x snap-mandatory scrollbar-hide -mx-6 px-6 lg:mx-0 lg:px-0">
+                    
+                    <!-- Project 1 -->
+                    <div class="flex-none w-[280px] lg:w-auto snap-center video-card-container group hover:scale-[1.01] transition-transform duration-300">
+                        <div class="aspect-[9/16] rounded-2xl overflow-hidden border border-white/10 relative bg-carbon-surface mb-4">
+                            <video class="w-full h-full object-cover custom-video" autoplay muted loop playsinline preload="metadata">
+                                <source src="videos/Video1.MP4" type="video/mp4">
                             </video>
                             
-                            <!-- Opción B: Vimeo Embed (Descomentar para usar y comentar etiqueta video arriba) -->
-                            <!--
-                            <iframe class="video-card__iframe" src="https://player.vimeo.com/video/5863140?background=1&autoplay=0&loop=1&muted=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-                            -->
-
-                            <div class="video-card__overlay">
-                                <span class="video-card__play-btn">▶</span>
-                                <span class="video-card__sound-tip">[ Click para activar sonido ]</span>
-                            </div>
+                            <!-- Custom Sound Button -->
+                            <button class="sound-toggle absolute bottom-4 right-4 z-20 w-10 h-10 rounded-full bg-black/60 backdrop-blur-md border border-white/15 flex items-center justify-center text-white hover:bg-white/20 transition-all cursor-pointer" aria-label="Toggle sound">
+                                <!-- Muted SVG (Default) -->
+                                <svg class="w-5 h-5 icon-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
+                                </svg>
+                                <!-- Unmuted SVG (Hidden initially) -->
+                                <svg class="w-5 h-5 icon-unmuted hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                                </svg>
+                            </button>
                         </div>
-                        <div class="video-card__info">
-                            <h3 class="video-card__title">JANSOUND</h3>
-                            <p class="video-card__desc">Generar exposición masiva y posicionamiento orgánico de marca.</p>
-                            <div class="video-card__tags">
-                                <span class="video-tag">[Edición y Creación]</span>
-                                <span class="video-tag">[Views: +4.7K]</span>
-                                <span class="video-tag">[Pipeline: 48hs]</span>
-                            </div>
+                        <h4 class="text-base font-bold text-white mb-2">JANSØUND / Contenido</h4>
+                        <div class="flex flex-wrap gap-2 font-mono text-[10px]">
+                            <span class="bg-white/5 border border-white/10 text-text-secondary px-2 py-1 rounded-sm">[Edición & Creación]</span>
+                            <span class="bg-white/5 border border-white/10 text-text-secondary px-2 py-1 rounded-sm">[Ritmo & Narrativa]</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="flex-none w-[280px] lg:w-auto snap-center video-card-container group hover:scale-[1.01] transition-transform duration-300">
+                        <div class="aspect-[9/16] rounded-2xl overflow-hidden border border-white/10 relative bg-carbon-surface mb-4">
+                            <video class="w-full h-full object-cover custom-video" autoplay muted loop playsinline preload="metadata">
+                                <source src="videos/proyecto2.mp4" type="video/mp4">
+                            </video>
+                            
+                            <!-- Custom Sound Button -->
+                            <button class="sound-toggle absolute bottom-4 right-4 z-20 w-10 h-10 rounded-full bg-black/60 backdrop-blur-md border border-white/15 flex items-center justify-center text-white hover:bg-white/20 transition-all cursor-pointer" aria-label="Toggle sound">
+                                <svg class="w-5 h-5 icon-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
+                                </svg>
+                                <svg class="w-5 h-5 icon-unmuted hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                                </svg>
+                            </button>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-2">Brand Campaign Reel</h4>
+                        <div class="flex flex-wrap gap-2 font-mono text-[10px]">
+                            <span class="bg-white/5 border border-white/10 text-text-secondary px-2 py-1 rounded-sm">[Edición Corta]</span>
+                            <span class="bg-white/5 border border-white/10 text-text-secondary px-2 py-1 rounded-sm">[Color & Sonido]</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="flex-none w-[280px] lg:w-auto snap-center video-card-container group hover:scale-[1.01] transition-transform duration-300">
+                        <div class="aspect-[9/16] rounded-2xl overflow-hidden border border-white/10 relative bg-carbon-surface mb-4">
+                            <video class="w-full h-full object-cover custom-video" autoplay muted loop playsinline preload="metadata">
+                                <source src="videos/Video3.mp4" type="video/mp4">
+                            </video>
+                            
+                            <!-- Custom Sound Button -->
+                            <button class="sound-toggle absolute bottom-4 right-4 z-20 w-10 h-10 rounded-full bg-black/60 backdrop-blur-md border border-white/15 flex items-center justify-center text-white hover:bg-white/20 transition-all cursor-pointer" aria-label="Toggle sound">
+                                <svg class="w-5 h-5 icon-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
+                                </svg>
+                                <svg class="w-5 h-5 icon-unmuted hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                                </svg>
+                            </button>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-2">Event Aftermovie / Nightlife</h4>
+                        <div class="flex flex-wrap gap-2 font-mono text-[10px]">
+                            <span class="bg-white/5 border border-white/10 text-text-secondary px-2 py-1 rounded-sm">[Narrativa Visual]</span>
+                            <span class="bg-white/5 border border-white/10 text-text-secondary px-2 py-1 rounded-sm">[Diseño de Sonido]</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="flex-none w-[280px] lg:w-auto snap-center video-card-container group hover:scale-[1.01] transition-transform duration-300">
+                        <div class="aspect-[9/16] rounded-2xl overflow-hidden border border-white/10 relative bg-carbon-surface mb-4">
+                            <video class="w-full h-full object-cover custom-video" autoplay muted loop playsinline preload="metadata">
+                                <source src="videos/proyecto4.mp4" type="video/mp4">
+                            </video>
+                            
+                            <!-- Custom Sound Button -->
+                            <button class="sound-toggle absolute bottom-4 right-4 z-20 w-10 h-10 rounded-full bg-black/60 backdrop-blur-md border border-white/15 flex items-center justify-center text-white hover:bg-white/20 transition-all cursor-pointer" aria-label="Toggle sound">
+                                <svg class="w-5 h-5 icon-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
+                                </svg>
+                                <svg class="w-5 h-5 icon-unmuted hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                                </svg>
+                            </button>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-2">Dynamic Content</h4>
+                        <div class="flex flex-wrap gap-2 font-mono text-[10px]">
+                            <span class="bg-white/5 border border-white/10 text-text-secondary px-2 py-1 rounded-sm">[Multicámara]</span>
+                            <span class="bg-white/5 border border-white/10 text-text-secondary px-2 py-1 rounded-sm">[Flujo de Trabajo]</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 lg:py-24 scroll-mt-28">
+            <div class="max-w-3xl mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-white mb-4">Edición dinámica,<br>gestión impecable.</h2>
+                    <p class="text-text-secondary text-lg mb-8 max-w-xl mx-auto">Contame sobre tu próximo proyecto y empezamos a estructurar tu contenido.</p>
+                    
+                    <div class="flex flex-wrap justify-center gap-3 font-mono text-[10px] uppercase tracking-wider">
+                        <span class="bg-white/5 border border-white/10 text-text-secondary px-4 py-2 rounded-full flex items-center gap-2">
+                            Respuesta en menos de 24 hs
+                        </span>
+                    </div>
+                </div>
+
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-mono uppercase tracking-wider text-text-secondary mb-3">Nombre o Empresa</label>
+                            <input type="text" class="w-full h-12 bg-white/5 border border-white/10 px-4 text-white focus:outline-none focus:border-white/40 transition-colors rounded-xl placeholder:text-text-secondary/30" placeholder="Ej. Agencia" required>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-mono uppercase tracking-wider text-text-secondary mb-3">Email</label>
+                            <input type="email" class="w-full h-12 bg-white/5 border border-white/10 px-4 text-white focus:outline-none focus:border-white/40 transition-colors rounded-xl placeholder:text-text-secondary/30" placeholder="correo@ejemplo.com" required>
                         </div>
                     </div>
                     
-                    <!-- Video 2 -->
-                    <div class="video-card" data-reveal="fade-up" style="--delay: 2;">
-                        <div class="video-card__container">
-                            <video class="video-card__player" preload="metadata" loop muted playsinline>
-                                <source src="videos/proyecto2.mp4#t=0.1" type="video/mp4">
-                                <source src="videos/proyecto2.webm" type="video/webm">
-                                Tu navegador no soporta video.
-                            </video>
-                            
-                            <!-- Opción B: Vimeo Embed (Descomentar para usar y comentar etiqueta video arriba) -->
-                            <!--
-                            <iframe class="video-card__iframe" src="https://player.vimeo.com/video/5863140?background=1&autoplay=0&loop=1&muted=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-                            -->
-
-                            <div class="video-card__overlay">
-                                <span class="video-card__play-btn">▶</span>
-                                <span class="video-card__sound-tip">[ Click para activar sonido ]</span>
-                            </div>
-                        </div>
-                        <div class="video-card__info">
-                            <h3 class="video-card__title">Brand Campaign Reel</h3>
-                            <p class="video-card__desc">Edición rítmica de alta retención para campañas móviles y formatos cortos.</p>
-                            <div class="video-card__tags">
-                                <span class="video-tag">[Edición Corta]</span>
-                                <span class="video-tag">[Color & Sonido]</span>
-                                <span class="video-tag">[Entrega: 24hs]</span>
-                            </div>
+                    <div>
+                        <label class="block text-xs font-mono uppercase tracking-wider text-text-secondary mb-3">Servicio que necesitas</label>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                            <label class="cursor-pointer">
+                                <input type="radio" name="service" value="edicion" class="peer sr-only" required>
+                                <div class="bg-white/5 border border-white/10 px-4 h-12 flex items-center justify-center text-sm font-medium text-text-secondary peer-checked:bg-white peer-checked:text-black peer-checked:border-white transition-all duration-300 rounded-xl text-center">
+                                    Edición Dinámica
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="service" value="post" class="peer sr-only">
+                                <div class="bg-white/5 border border-white/10 px-4 h-12 flex items-center justify-center text-sm font-medium text-text-secondary peer-checked:bg-white peer-checked:text-black peer-checked:border-white transition-all duration-300 rounded-xl text-center">
+                                    Posproducción & Sonido
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="service" value="integral" class="peer sr-only">
+                                <div class="bg-white/5 border border-white/10 px-4 h-12 flex items-center justify-center text-sm font-medium text-text-secondary peer-checked:bg-white peer-checked:text-black peer-checked:border-white transition-all duration-300 rounded-xl text-center">
+                                    Proyecto Integral
+                                </div>
+                            </label>
                         </div>
                     </div>
 
-                    <!-- Video 3 -->
-                    <div class="video-card" data-reveal="fade-up" style="--delay: 3;">
-                        <div class="video-card__container">
-                            <video class="video-card__player" preload="metadata" loop muted playsinline>
-                                <source src="videos/proyecto3.mp4#t=0.1" type="video/mp4">
-                                <source src="videos/proyecto3.webm" type="video/webm">
-                                Tu navegador no soporta video.
-                            </video>
-                            
-                            <!-- Opción B: Vimeo Embed (Descomentar para usar y comentar etiqueta video arriba) -->
-                            <!--
-                            <iframe class="video-card__iframe" src="https://player.vimeo.com/video/5863140?background=1&autoplay=0&loop=1&muted=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-                            -->
-
-                            <div class="video-card__overlay">
-                                <span class="video-card__play-btn">▶</span>
-                                <span class="video-card__sound-tip">[ Click para activar sonido ]</span>
-                            </div>
-                        </div>
-                        <div class="video-card__info">
-                            <h3 class="video-card__title">Event Aftermovie - Ops & Edit</h3>
-                            <p class="video-card__desc">Aftermovie oficial con narrativa inmersiva y coordinación técnica a gran escala.</p>
-                            <div class="video-card__tags">
-                                <span class="video-tag">[Narrativa Visual]</span>
-                                <span class="video-tag">[Dirección Técnica]</span>
-                                <span class="video-tag">[Ops de Rodaje]</span>
-                            </div>
-                        </div>
+                    <div>
+                        <label class="block text-xs font-mono uppercase tracking-wider text-text-secondary mb-3">Mensaje</label>
+                        <textarea rows="4" class="w-full bg-white/5 border border-white/10 p-4 text-white focus:outline-none focus:border-white/40 transition-colors resize-none rounded-xl placeholder:text-text-secondary/30" placeholder="Detalles de tu proyecto..." required></textarea>
                     </div>
-
-                    <!-- Video 4 -->
-                    <div class="video-card" data-reveal="fade-up" style="--delay: 4;">
-                        <div class="video-card__container">
-                            <video class="video-card__player" preload="metadata" loop muted playsinline>
-                                <source src="videos/proyecto4.mp4#t=0.1" type="video/mp4">
-                                <source src="videos/proyecto4.webm" type="video/webm">
-                                Tu navegador no soporta video.
-                            </video>
-                            
-                            <!-- Opción B: Vimeo Embed (Descomentar para usar y comentar etiqueta video arriba) -->
-                            <!--
-                            <iframe class="video-card__iframe" src="https://player.vimeo.com/video/5863140?background=1&autoplay=0&loop=1&muted=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-                            -->
-
-                            <div class="video-card__overlay">
-                                <span class="video-card__play-btn">▶</span>
-                                <span class="video-card__sound-tip">[ Click para activar sonido ]</span>
-                            </div>
-                        </div>
-                        <div class="video-card__info">
-                            <h3 class="video-card__title">Dynamic Content Pipeline</h3>
-                            <p class="video-card__desc">Montaje dinámico y optimización del pipeline de postproducción de múltiples canales.</p>
-                            <div class="video-card__tags">
-                                <span class="video-tag">[Multi-Cámara]</span>
-                                <span class="video-tag">[Gestión de Assets]</span>
-                                <span class="video-tag">[Reloj Suizo]</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 5. Contact Section -->
-        <section id="contact" class="contact section" data-reveal="fade-up">
-            <div class="section__container">
-                <div class="contact__content">
-                    <h2 class="section__title" style="text-align: center; margin-bottom: 1rem;">Edición dinámica, gestión impecable.</h2>
-                    <p class="contact__intro">Contame sobre tu próximo proyecto y empecemos a estructurar tu contenido.</p>
                     
-                    <form action="#" method="POST" class="contact-form">
-                        <div class="form-group form-group--floating">
-                            <input type="text" id="name" class="form-input" placeholder=" " required>
-                            <label for="name" class="form-label">Tu Nombre o Empresa</label>
-                        </div>
-                        <div class="form-group form-group--floating">
-                            <input type="email" id="email" class="form-input" placeholder=" " required>
-                            <label for="email" class="form-label">Tu Email</label>
-                        </div>
-                        <div class="form-group">
-                            <select id="project-type" class="form-input form-select" required>
-                                <option value="" disabled selected hidden>¿Qué servicio necesitas estructurar?</option>
-                                <option value="edicion">Edición de Video</option>
-                                <option value="ops-pm">Project Management Audiovisual</option>
-                                <option value="completo">Edición + Coordinación Completa</option>
-                                <option value="otro">Otro</option>
-                            </select>
-                        </div>
-                        <div class="form-group form-group--floating">
-                            <textarea id="message" class="form-textarea" placeholder=" " required></textarea>
-                            <label for="message" class="form-label">¿Cómo puedo ayudarte?</label>
-                        </div>
-                        <button type="submit" class="button button--gradient" style="margin-top: 1rem; width: 100%;">Enviar Mensaje</button>
-                        <p class="contact__commitment">[ Respuesta garantizada en menos de 24 horas. Organización desde el primer contacto. ]</p>
-                    </form>
-                </div>
+                    <div class="pt-4">
+                        <button type="submit" class="w-full bg-white text-black h-14 font-bold tracking-wide hover:bg-gray-200 hover:scale-[1.01] transition-all duration-300 rounded-xl text-base shadow-[0_0_20px_rgba(255,255,255,0.15)]">
+                            Enviar Mensaje
+                        </button>
+                    </div>
+                </form>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="section__container">
-            <p class="footer__text">&copy; 2026 Jano Farías. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="py-10 bg-carbon-base text-[10px] font-mono uppercase tracking-wider text-text-secondary border-t border-white/5">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-6">
+            <div>&copy; 2026 JANO PORTFOLIO</div>
+            <div class="flex items-center gap-8">
+                <a href="#" class="hover:text-white transition-colors">Instagram</a>
+                <a href="#" class="hover:text-white transition-colors">Vimeo</a>
+                <a href="#" class="hover:text-white transition-colors">LinkedIn</a>
+            </div>
         </div>
     </footer>
 
-    <!-- Interactive Experience Script (Mouse Glow, Scroll Reveal, Video Hover) -->
+    <!-- Video Audio Control Logic -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // 1. Mouse Follower Glow (updates CSS variables on body)
-            document.addEventListener('mousemove', (e) => {
-                document.documentElement.style.setProperty('--mouse-x', `${e.clientX}px`);
-                document.documentElement.style.setProperty('--mouse-y', `${e.clientY}px`);
-            });
+            const allCustomVideos = document.querySelectorAll('.custom-video');
+            const toggleButtons = document.querySelectorAll('.sound-toggle');
 
-            // 2. Intersection Observer for Scroll Reveal
-            const revealElements = document.querySelectorAll('[data-reveal]');
-            
-            const revealObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('revealed');
-                        revealObserver.unobserve(entry.target); // Unobserve to keep revealed
+            toggleButtons.forEach((btn) => {
+                btn.addEventListener('click', (e) => {
+                    // Prevent any default behavior
+                    e.preventDefault();
+                    
+                    // Find the video inside the same container
+                    const container = btn.closest('.aspect-\\[9\\/16\\]');
+                    const video = container.querySelector('video');
+                    const iconMuted = btn.querySelector('.icon-muted');
+                    const iconUnmuted = btn.querySelector('.icon-unmuted');
+
+                    // If we are unmuting this video, mute ALL others first
+                    if (video.muted) {
+                        allCustomVideos.forEach(v => {
+                            v.muted = true;
+                            // Update their icons to muted
+                            const siblingBtn = v.parentElement.querySelector('.sound-toggle');
+                            if(siblingBtn) {
+                                siblingBtn.querySelector('.icon-muted').classList.remove('hidden');
+                                siblingBtn.querySelector('.icon-unmuted').classList.add('hidden');
+                            }
+                        });
+                        
+                        // Unmute this one
+                        video.muted = false;
+                        iconMuted.classList.add('hidden');
+                        iconUnmuted.classList.remove('hidden');
+                    } else {
+                        // Mute this one
+                        video.muted = true;
+                        iconMuted.classList.remove('hidden');
+                        iconUnmuted.classList.add('hidden');
                     }
                 });
-            }, {
-                threshold: 0.08,
-                rootMargin: '0px 0px -40px 0px'
-            });
-
-            revealElements.forEach(el => revealObserver.observe(el));
-
-            // 3. Header Scroll Glassmorphic Effect
-            const header = document.querySelector('.header');
-            const checkScroll = () => {
-                if (window.scrollY > 50) {
-                    header.classList.add('header--scrolled');
-                } else {
-                    header.classList.remove('header--scrolled');
-                }
-            };
-            window.addEventListener('scroll', checkScroll);
-            checkScroll(); // Check on init
-
-            // 4. Video Interaction & Hover Play
-            const videoCards = document.querySelectorAll('.video-card');
-            
-            videoCards.forEach(card => {
-                const video = card.querySelector('.video-card__player');
-                const overlay = card.querySelector('.video-card__overlay');
-                
-                if (video) {
-                    // Play on mouse enter (desktop hover-play)
-                    card.addEventListener('mouseenter', () => {
-                        video.play().catch(err => {
-                            console.log("Auto-play prevented or video not loaded:", err);
-                        });
-                        overlay.style.opacity = '0';
-                    });
-                    
-                    // Pause on mouse leave
-                    card.addEventListener('mouseleave', () => {
-                        video.pause();
-                        overlay.style.opacity = '1';
-                    });
-                    
-                    // On click: toggle sound and native controls
-                    card.addEventListener('click', () => {
-                        video.muted = !video.muted;
-                        if (video.hasAttribute('controls')) {
-                            video.removeAttribute('controls');
-                        } else {
-                            video.setAttribute('controls', 'true');
-                        }
-                    });
-                }
             });
         });
     </script>
