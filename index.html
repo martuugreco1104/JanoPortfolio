@@ -57,7 +57,7 @@
     <div class="fixed top-6 left-0 w-full z-50 flex justify-center px-4 pointer-events-none">
         <header class="pointer-events-auto backdrop-blur-md bg-black/60 border border-white/10 rounded-full px-5 py-3 flex items-center justify-between w-full max-w-5xl shadow-2xl transition-all">
             <div class="flex items-center">
-                <span class="font-bold text-lg tracking-tight text-white leading-none">JANO PORTAFOLIO</span>
+                <span class="font-bold text-lg tracking-tight text-white leading-none">JANO FARIAS</span>
             </div>
             
             <!-- Desktop Nav -->
@@ -106,7 +106,7 @@
                     </div>
                     
                     <!-- Visual Content -->
-                    <div class="lg:col-span-5 flex justify-center lg:justify-end order-1 lg:order-2">
+                    <div class="hidden md:flex lg:col-span-5 justify-center lg:justify-end order-1 lg:order-2">
                         <div class="relative w-full max-w-[320px] aspect-[4/5] lg:aspect-[9/16] max-h-72 lg:max-h-[560px] rounded-3xl overflow-hidden border border-white/15 shadow-[0_20px_50px_rgba(0,0,0,0.5)] bg-carbon-surface group">
                             <video class="w-full h-full object-cover scale-105 transition-transform duration-1000" autoplay muted loop playsinline preload="metadata">
                                 <source src="videos/Video3.mp4" type="video/mp4">
@@ -130,32 +130,23 @@
         <!-- Sobre Mí Section -->
         <section id="about" class="py-20 lg:py-24 border-b border-white/5 scroll-mt-28">
             <div class="max-w-6xl mx-auto px-6">
-                <h2 class="text-3xl font-bold tracking-tight text-white mb-8">Sobre Mí</h2>
-                
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-                    <div>
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                    
+                    <!-- Text Content -->
+                    <div class="md:col-span-7">
+                        <h2 class="text-3xl font-bold tracking-tight text-white mb-8">Sobre Mí</h2>
                         <p class="text-text-secondary text-lg leading-relaxed max-w-xl">
                             Mi enfoque combina estética visual, ritmo y una rigurosa disciplina de trabajo. Cuento con experiencia liderando equipos y coordinando proyectos bajo alta exigencia, lo que me permite aportar no solo creatividad en el montaje, sino también una comunicación clara, un flujo de trabajo altamente ordenado y un compromiso absoluto con los tiempos de entrega.
                         </p>
                     </div>
                     
-                    <div class="flex flex-col sm:flex-row divide-y sm:divide-y-0 sm:divide-x divide-white/10 border border-white/10 rounded-2xl bg-carbon-surface overflow-hidden">
-                        <div class="p-6 flex-1 flex flex-col justify-center items-center text-center hover:bg-white/5 transition-colors">
-                            <div class="text-4xl lg:text-5xl font-bold text-white mb-2 tracking-tighter">4+</div>
-                            <div class="text-xs text-text-secondary font-mono uppercase tracking-wider">Años</div>
-                            <div class="text-[11px] text-text-secondary mt-1">Experiencia en Coordinación</div>
-                        </div>
-                        <div class="p-6 flex-1 flex flex-col justify-center items-center text-center hover:bg-white/5 transition-colors">
-                            <div class="text-4xl lg:text-5xl font-bold text-white mb-2 tracking-tighter">100%</div>
-                            <div class="text-xs text-text-secondary font-mono uppercase tracking-wider">Entregas</div>
-                            <div class="text-[11px] text-text-secondary mt-1">A Término</div>
-                        </div>
-                        <div class="p-6 flex-1 flex flex-col justify-center items-center text-center hover:bg-white/5 transition-colors">
-                            <div class="text-4xl lg:text-5xl font-bold text-white mb-2 tracking-tighter">10K+</div>
-                            <div class="text-xs text-text-secondary font-mono uppercase tracking-wider">Assets</div>
-                            <div class="text-[11px] text-text-secondary mt-1">Organizados</div>
+                    <!-- Image Content -->
+                    <div class="md:col-span-5 h-full">
+                        <div class="w-full h-full aspect-[3/4] md:aspect-[4/5] rounded-2xl overflow-hidden border border-white/10 bg-transparent">
+                            <img src="img/perfil.png" alt="Jano Farias" class="w-full h-full object-cover">
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -178,9 +169,11 @@
                             <span class="bg-white/5 border border-white/10 px-2.5 py-1 rounded-sm text-text-secondary">[CapCut]</span>
                             <span class="bg-white/5 border border-white/10 px-2.5 py-1 rounded-sm text-text-secondary">[Photoshop]</span>
                         </div>
-                        <p class="flex-grow text-sm leading-relaxed text-zinc-400">
-                            Edición rítmica utilizando CapCut y Photoshop para Reels, TikToks, Shorts y contenido dinámico. Enfoque centrado en la retención de audiencia, cortes precisos al ritmo de la música y piezas visualmente atractivas.
-                        </p>
+                        <ul class="flex-grow space-y-2 text-sm text-zinc-300">
+                            <li class="flex items-start gap-2"><span class="text-zinc-500 mt-0.5">•</span> Edición rítmica orientada a Reels, TikToks y Shorts.</li>
+                            <li class="flex items-start gap-2"><span class="text-zinc-500 mt-0.5">•</span> Enfoque estratégico en la retención de audiencia.</li>
+                            <li class="flex items-start gap-2"><span class="text-zinc-500 mt-0.5">•</span> Cortes precisos al pulso musical y ritmo dinámico.</li>
+                        </ul>
                     </div>
                     
                     <!-- Servicio 2 -->
@@ -192,9 +185,11 @@
                             <span class="bg-white/5 border border-white/10 px-2.5 py-1 rounded-sm text-text-secondary">[Ableton Live]</span>
                             <span class="bg-white/5 border border-white/10 px-2.5 py-1 rounded-sm text-text-secondary">[Diseño Sonoro]</span>
                         </div>
-                        <p class="flex-grow text-sm leading-relaxed text-zinc-400">
-                            Tratamiento sonoro y diseño de audio optimizado en Ableton Live, edición de SFX, corrección de color básica, subtítulos dinámicos y gráfica aplicada para elevar la calidad visual y auditiva del contenido.
-                        </p>
+                        <ul class="flex-grow space-y-2 text-sm text-zinc-300">
+                            <li class="flex items-start gap-2"><span class="text-zinc-500 mt-0.5">•</span> Tratamiento y optimización sonora en Ableton Live.</li>
+                            <li class="flex items-start gap-2"><span class="text-zinc-500 mt-0.5">•</span> Diseño de audio, micro-impactos y efectos SFX.</li>
+                            <li class="flex items-start gap-2"><span class="text-zinc-500 mt-0.5">•</span> Corrección de color, subtítulos dinámicos y gráfica aplicada.</li>
+                        </ul>
                     </div>
                     
                     <!-- Servicio 3 -->
@@ -206,9 +201,11 @@
                             <span class="bg-white/5 border border-white/10 px-2.5 py-1 rounded-sm text-text-secondary">[Organización]</span>
                             <span class="bg-white/5 border border-white/10 px-2.5 py-1 rounded-sm text-text-secondary">[Puntualidad]</span>
                         </div>
-                        <p class="flex-grow text-sm leading-relaxed text-zinc-400">
-                            Estructuración eficiente del material de trabajo, organización metódica de assets/archivos y un proceso de edición transparente para asegurar que cada entrega se cumpla sin fricciones y en la fecha acordada.
-                        </p>
+                        <ul class="flex-grow space-y-2 text-sm text-zinc-300">
+                            <li class="flex items-start gap-2"><span class="text-zinc-500 mt-0.5">•</span> Clasificación y estructuración metódica de assets brutos.</li>
+                            <li class="flex items-start gap-2"><span class="text-zinc-500 mt-0.5">•</span> Proceso de revisión transparente y sin fricciones.</li>
+                            <li class="flex items-start gap-2"><span class="text-zinc-500 mt-0.5">•</span> Compromiso absoluto con los tiempos de entrega pactados.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -219,10 +216,10 @@
             <div class="max-w-6xl mx-auto px-6">
                 <h2 class="text-3xl font-bold tracking-tight text-white mb-10">Videos Seleccionados</h2>
                 
-                <div class="flex overflow-x-auto lg:grid lg:grid-cols-4 gap-4 lg:gap-6 pb-6 lg:pb-0 snap-x snap-mandatory scrollbar-hide -mx-6 px-6 lg:mx-0 lg:px-0">
+                <div class="flex overflow-x-auto md:grid md:grid-cols-3 gap-4 md:gap-6 pb-6 md:pb-0 snap-x snap-mandatory scrollbar-hide -mx-6 px-6 md:mx-auto md:px-0 max-w-5xl">
                     
                     <!-- Project 1 -->
-                    <div class="flex-none w-[280px] lg:w-auto snap-center video-card-container group hover:scale-[1.01] transition-transform duration-300">
+                    <div class="flex-none w-[280px] md:w-auto snap-center video-card-container group hover:scale-[1.01] transition-transform duration-300">
                         <div class="aspect-[9/16] rounded-2xl overflow-hidden border border-white/10 relative bg-carbon-surface mb-4">
                             <video class="w-full h-full object-cover custom-video" autoplay muted loop playsinline preload="metadata">
                                 <source src="videos/Video1.MP4" type="video/mp4">
@@ -249,32 +246,7 @@
                     </div>
 
                     <!-- Project 2 -->
-                    <div class="flex-none w-[280px] lg:w-auto snap-center video-card-container group hover:scale-[1.01] transition-transform duration-300">
-                        <div class="aspect-[9/16] rounded-2xl overflow-hidden border border-white/10 relative bg-carbon-surface mb-4">
-                            <video class="w-full h-full object-cover custom-video" autoplay muted loop playsinline preload="metadata">
-                                <source src="videos/proyecto2.mp4" type="video/mp4">
-                            </video>
-                            
-                            <!-- Custom Sound Button -->
-                            <button class="sound-toggle absolute bottom-4 right-4 z-20 w-10 h-10 rounded-full bg-black/60 backdrop-blur-md border border-white/15 flex items-center justify-center text-white hover:bg-white/20 transition-all cursor-pointer" aria-label="Toggle sound">
-                                <svg class="w-5 h-5 icon-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
-                                </svg>
-                                <svg class="w-5 h-5 icon-unmuted hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
-                                </svg>
-                            </button>
-                        </div>
-                        <h4 class="text-base font-bold text-white mb-2">Brand Campaign Reel</h4>
-                        <div class="flex flex-wrap gap-2 font-mono text-[10px]">
-                            <span class="bg-white/5 border border-white/10 text-text-secondary px-2 py-1 rounded-sm">[Edición Corta]</span>
-                            <span class="bg-white/5 border border-white/10 text-text-secondary px-2 py-1 rounded-sm">[Color & Sonido]</span>
-                        </div>
-                    </div>
-
-                    <!-- Project 3 -->
-                    <div class="flex-none w-[280px] lg:w-auto snap-center video-card-container group hover:scale-[1.01] transition-transform duration-300">
+                    <div class="flex-none w-[280px] md:w-auto snap-center video-card-container group hover:scale-[1.01] transition-transform duration-300">
                         <div class="aspect-[9/16] rounded-2xl overflow-hidden border border-white/10 relative bg-carbon-surface mb-4">
                             <video class="w-full h-full object-cover custom-video" autoplay muted loop playsinline preload="metadata">
                                 <source src="videos/Video3.mp4" type="video/mp4">
@@ -298,8 +270,8 @@
                         </div>
                     </div>
 
-                    <!-- Project 4 -->
-                    <div class="flex-none w-[280px] lg:w-auto snap-center video-card-container group hover:scale-[1.01] transition-transform duration-300">
+                    <!-- Project 3 -->
+                    <div class="flex-none w-[280px] md:w-auto snap-center video-card-container group hover:scale-[1.01] transition-transform duration-300">
                         <div class="aspect-[9/16] rounded-2xl overflow-hidden border border-white/10 relative bg-carbon-surface mb-4">
                             <video class="w-full h-full object-cover custom-video" autoplay muted loop playsinline preload="metadata">
                                 <source src="videos/proyecto4.mp4" type="video/mp4">
@@ -330,64 +302,26 @@
         <!-- Contact Section -->
         <section id="contact" class="py-16 lg:py-24 scroll-mt-28">
             <div class="max-w-3xl mx-auto px-6">
-                <div class="text-center mb-12">
+                <div class="text-center">
                     <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-white mb-4">Edición dinámica,<br>gestión impecable.</h2>
                     <p class="text-text-secondary text-lg mb-8 max-w-xl mx-auto">Contame sobre tu próximo proyecto y empezamos a estructurar tu contenido.</p>
                     
-                    <div class="flex flex-wrap justify-center gap-3 font-mono text-[10px] uppercase tracking-wider">
+                    <div class="flex flex-wrap justify-center gap-3 font-mono text-[10px] uppercase tracking-wider mb-10">
                         <span class="bg-white/5 border border-white/10 text-text-secondary px-4 py-2 rounded-full flex items-center gap-2">
-                            Respuesta en menos de 24 hs
+                            [ Respuesta en menos de 24 hs ]
+                        </span>
+                        <span class="bg-white/5 border border-white/10 text-text-secondary px-4 py-2 rounded-full flex items-center gap-2">
+                            [ Organización desde el primer día ]
                         </span>
                     </div>
+
+                    <a href="https://wa.me/5491168501125?text=Hola%20Jano,%20vi%20tu%20portfolio%20y%20quiero%20consultarte%20por%20un%20proyecto" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-white text-black font-semibold hover:bg-zinc-200 transition-all text-base md:text-lg shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:scale-[1.02]">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+                        </svg>
+                        Hablemos por WhatsApp
+                    </a>
                 </div>
-
-                <form class="space-y-6">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-xs font-mono uppercase tracking-wider text-text-secondary mb-3">Nombre o Empresa</label>
-                            <input type="text" class="w-full h-12 bg-white/5 border border-white/10 px-4 text-white focus:outline-none focus:border-white/40 transition-colors rounded-xl placeholder:text-text-secondary/30" placeholder="Ej. Agencia" required>
-                        </div>
-                        <div>
-                            <label class="block text-xs font-mono uppercase tracking-wider text-text-secondary mb-3">Email</label>
-                            <input type="email" class="w-full h-12 bg-white/5 border border-white/10 px-4 text-white focus:outline-none focus:border-white/40 transition-colors rounded-xl placeholder:text-text-secondary/30" placeholder="correo@ejemplo.com" required>
-                        </div>
-                    </div>
-                    
-                    <div>
-                        <label class="block text-xs font-mono uppercase tracking-wider text-text-secondary mb-3">Servicio que necesitas</label>
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
-                            <label class="cursor-pointer">
-                                <input type="radio" name="service" value="edicion" class="peer sr-only" required>
-                                <div class="bg-white/5 border border-white/10 px-4 h-12 flex items-center justify-center text-sm font-medium text-text-secondary peer-checked:bg-white peer-checked:text-black peer-checked:border-white transition-all duration-300 rounded-xl text-center">
-                                    Edición Dinámica
-                                </div>
-                            </label>
-                            <label class="cursor-pointer">
-                                <input type="radio" name="service" value="post" class="peer sr-only">
-                                <div class="bg-white/5 border border-white/10 px-4 h-12 flex items-center justify-center text-sm font-medium text-text-secondary peer-checked:bg-white peer-checked:text-black peer-checked:border-white transition-all duration-300 rounded-xl text-center">
-                                    Posproducción & Sonido
-                                </div>
-                            </label>
-                            <label class="cursor-pointer">
-                                <input type="radio" name="service" value="integral" class="peer sr-only">
-                                <div class="bg-white/5 border border-white/10 px-4 h-12 flex items-center justify-center text-sm font-medium text-text-secondary peer-checked:bg-white peer-checked:text-black peer-checked:border-white transition-all duration-300 rounded-xl text-center">
-                                    Proyecto Integral
-                                </div>
-                            </label>
-                        </div>
-                    </div>
-
-                    <div>
-                        <label class="block text-xs font-mono uppercase tracking-wider text-text-secondary mb-3">Mensaje</label>
-                        <textarea rows="4" class="w-full bg-white/5 border border-white/10 p-4 text-white focus:outline-none focus:border-white/40 transition-colors resize-none rounded-xl placeholder:text-text-secondary/30" placeholder="Detalles de tu proyecto..." required></textarea>
-                    </div>
-                    
-                    <div class="pt-4">
-                        <button type="submit" class="w-full bg-white text-black h-14 font-bold tracking-wide hover:bg-gray-200 hover:scale-[1.01] transition-all duration-300 rounded-xl text-base shadow-[0_0_20px_rgba(255,255,255,0.15)]">
-                            Enviar Mensaje
-                        </button>
-                    </div>
-                </form>
             </div>
         </section>
     </main>
@@ -395,7 +329,7 @@
     <!-- Footer -->
     <footer class="py-10 bg-carbon-base text-[10px] font-mono uppercase tracking-wider text-text-secondary border-t border-white/5">
         <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-6">
-            <div>&copy; 2026 JANO PORTFOLIO</div>
+            <div>&copy; 2026 JANO FARIAS</div>
             <div class="flex items-center gap-8">
                 <a href="#" class="hover:text-white transition-colors">Instagram</a>
                 <a href="#" class="hover:text-white transition-colors">Vimeo</a>
