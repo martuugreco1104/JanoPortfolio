@@ -139,15 +139,49 @@
         </div>
 
         <!-- Sobre Mí Section -->
-        <section id="about" class="py-20 lg:py-24 border-b border-white/5 scroll-mt-28">
-            <div class="max-w-6xl mx-auto px-6">
+        <section id="about" class="relative py-20 lg:py-24 border-b border-white/5 scroll-mt-28 overflow-hidden">
+            
+            <!-- Decoración sutil de interfaz de cámara/edición -->
+            <div class="absolute inset-0 pointer-events-none select-none z-0">
+                <!-- Esquinas (Crop marks) -->
+                <div class="absolute top-8 left-8 border-t border-l border-white/10 w-6 h-6"></div>
+                <div class="absolute top-8 right-8 border-t border-r border-white/10 w-6 h-6"></div>
+                <div class="absolute bottom-8 left-8 border-b border-l border-white/10 w-6 h-6"></div>
+                <div class="absolute bottom-8 right-8 border-b border-r border-white/10 w-6 h-6"></div>
+
+                <!-- REC Indicator -->
+                <div class="absolute top-10 left-12 flex items-center gap-2 font-mono text-[10px] text-white/20 tracking-widest">
+                    <div class="w-2 h-2 rounded-full bg-red-500/50 animate-pulse"></div>
+                    REC
+                </div>
+
+                <!-- Timecode -->
+                <div class="absolute top-10 left-1/2 transform -translate-x-1/2 font-mono text-[10px] text-white/10 tracking-widest">
+                    TCR 00:04:12:08
+                </div>
+
+                <!-- Info (Bottom right/left) -->
+                <div class="absolute bottom-10 right-12 font-mono text-[10px] text-white/10 tracking-widest">
+                    4K / 24FPS
+                </div>
+                <div class="absolute bottom-10 left-12 font-mono text-[10px] text-white/10 tracking-widest">
+                    CH1 CH2
+                </div>
+
+                <!-- Center crosshair -->
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center text-white/5 font-light text-2xl">
+                    +
+                </div>
+            </div>
+
+            <div class="max-w-6xl mx-auto px-6 relative z-10">
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
                     
                     <!-- Text Content -->
                     <div class="md:col-span-7">
                         <h2 class="text-3xl font-bold tracking-tight text-white mb-8">Sobre Mí</h2>
                         <p class="text-text-secondary text-lg leading-relaxed max-w-xl">
-                            Mi enfoque combina estética visual, ritmo y una rigurosa disciplina de trabajo. Cuento con experiencia liderando equipos y coordinando proyectos bajo alta exigencia, lo que me permite aportar no solo creatividad en el montaje, sino también una comunicación clara, un flujo de trabajo altamente ordenado y un compromiso absoluto con los tiempos de entrega.
+                            Mi enfoque combina estética visual, ritmo y una rigurosa disciplina de trabajo. Aporto no solo creatividad en el montaje, sino también una comunicación clara, un flujo de trabajo altamente ordenado y un compromiso absoluto con los tiempos de entrega.
                         </p>
                     </div>
                     
